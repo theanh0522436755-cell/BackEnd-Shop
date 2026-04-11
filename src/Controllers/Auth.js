@@ -385,7 +385,7 @@ const Forgotpassword = async (req, res) => {
     });
     await resetToken.save();
 
-    const resetLink = `http://localhost:5173/reset-password?token=${token}`;
+    const resetLink = `https://mta-shop.vercel.app/reset-password?token=${token}`;
 
     // Thiết lập transporter để gửi email
     let transporter = nodemailer.createTransport({

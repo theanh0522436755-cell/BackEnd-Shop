@@ -313,7 +313,7 @@ class OrderService {
     const appTime = Date.now();
 
     const embed_data = {
-      redirecturl: `http://localhost:5173/vnpay_return/${id}`,
+      redirecturl: `https://mta-shop.vercel.app/vnpay_return/${id}`,
       merchantinfo: "Doisin Store",
       promotioninfo: "",
       redirectdata: "",
@@ -398,7 +398,7 @@ class OrderService {
         `Thanh toan don hang : ${orderId}`
       ).replace(/%20/g, "+"),
       vnp_OrderType: "other",
-      vnp_ReturnUrl: `http://localhost:5173/vnpay_return/${id}`,
+      vnp_ReturnUrl: `https://mta-shop.vercel.app/vnpay_return/${id}`,
       vnp_TmnCode: vnp_TmnCode,
       vnp_TxnRef: orderId,
       vnp_Version: "2.1.0",
@@ -428,8 +428,8 @@ class OrderService {
     const secretKey = "K951B6PE1waDMi640xX08PD3vg6EkVlz";
     const orderInfo = "pay with MoMo";
     const partnerCode = "MOMO";
-    const redirectUrl = `http://localhost:5173/vnpay_return/${id}`;
-    const ipnUrl = `http://localhost:5173/vnpay_return/${id}`;
+    const redirectUrl = `https://mta-shop.vercel.app/vnpay_return/${id}`;
+    const ipnUrl = `https://mta-shop.vercel.app/vnpay_return/${id}`;
     const requestType = "payWithMethod";
     const orderId = partnerCode + new Date().getTime();
     const requestId = orderId;

@@ -25,7 +25,7 @@ const Order = require("./Model/Order");
 const io = new Server(server, {
   cors: {
     origin: [
-      "http://localhost:5173",
+      "https://mta-shop.vercel.app",
       "http://localhost:5174",
       "exp://192.168.110.8:8081",
       "exp://192.168.1.219:8081",
@@ -38,7 +38,7 @@ const io = new Server(server, {
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
+      "https://mta-shop.vercel.app",
       "http://localhost:5174",
       "exp://192.168.110.8:8081",
       "exp://192.168.1.219:8081",

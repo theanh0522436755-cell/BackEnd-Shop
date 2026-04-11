@@ -154,7 +154,7 @@ Ví dụ: "Tôi gợi ý cho bạn áo Levents Love Ring Regular Tee với giá 
             sold: p.sold,
             view: p.view,
             image: firstImage,
-            detailUrl: `http://localhost:5173/product/${p.slug}`,
+            detailUrl: `https://mta-shop.vercel.app/product/${p.slug}`,
           };
         });
     }
