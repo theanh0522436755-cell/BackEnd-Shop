@@ -15,8 +15,8 @@ require("dotenv").config;
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "dangtrinhduyanh100202@gmail.com",
-    pass: "qfmc zizc ppdg ldjg",
+    user: "theanh0522436755@gmail.com",
+    pass: "hdk wazi pqto vkgl",
   },
 });
 const RegisterUserAPI = async (req, res) => {
@@ -398,7 +398,7 @@ const Forgotpassword = async (req, res) => {
 
     // Thiết lập thông tin email
     const mailOptions = {
-      from: `"Shop Duy Anh" <${process.env.EMAIL_USER}>`,
+      from: `"Shop Mai The Anh" <${process.env.EMAIL_USER}>`,
       to: user.email,
       subject: "Reset mật khẩu",
       html: `<p>Nhấn vào link để đặt lại mật khẩu (10 phút):</p><a href="${resetLink}">${resetLink}</a>`,
@@ -516,7 +516,7 @@ const sendOTP = async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: `"Duy Anh Shop" <your-email@gmail.com>`, // ghi đúng định dạng from
+      from: `"Mai The Anh Shop" <your-email@gmail.com>`, // ghi đúng định dạng from
       to: email,
       subject: "Mã OTP xác thực tài khoản",
       text: `Mã OTP của bạn là: ${otp}. Có hiệu lực trong 5 phút.`,
@@ -698,7 +698,7 @@ const sendPasswordRecoveryEmail = async (req, res) => {
 
     // 5. Gửi email
     await transporter.sendMail({
-      from: `Duy Anh Shop <no-reply@duyanhshop.com>`,
+      from: `Mai The Anh Shop <no-reply@mtashop.com>`,
       to: email,
       subject: "Khôi phục mật khẩu tài khoản",
       text: `Mật khẩu mới của bạn là: ${newPassword} Vui lòng đăng nhập và đổi lại mật khẩu trong trang cá nhân.`,

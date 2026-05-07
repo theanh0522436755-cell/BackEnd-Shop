@@ -16,8 +16,8 @@ const Transaction = require("../Model/transactionSchema");
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "dangtrinhduyanh100202@gmail.com",
-    pass: "qfmc zizc ppdg ldjg",
+    user: "theanh0522436755@gmail.com",
+    pass: "hdk wazi pqto vkgl",
   },
 });
 
@@ -27,7 +27,7 @@ const SEPAY_CONFIG = {
   accountNumber: "2223230519",
   accountName: "MAI THE ANH",
   bankCode: "MBBank",
-  webhookSecret: "https://nonsatiric-sterlingly-michelina.ngrok-free.dev/sepay/callback",
+  webhookSecret: "https://backend-shop-production-14fa.up.railway.app/sepay/callback",
 };
 
 const config = {
@@ -59,8 +59,8 @@ class OrderService {
     return nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: process.env.EMAIL_USER || "dangtrinhduyanh100202@gmail.com",
-        pass: process.env.EMAIL_PASS || "qfmc zizc ppdg ldjg",
+        user: process.env.EMAIL_USER || "theanh0522436755@gmail.com",
+        pass: process.env.EMAIL_PASS || "hdk wazi pqto vkgl",
       },
     });
   }
@@ -217,7 +217,7 @@ class OrderService {
 
   async sendOrderEmail(email, emailContent) {
     const mailOptions = {
-      from: process.env.EMAIL_USER || "dangtrinhduyanh100202@gmail.com",
+      from: process.env.EMAIL_USER || "theanh0522436755@gmail.com",
       to: email,
       subject: "BẠN ĐÃ ĐẶT ĐƠN HÀNG THÀNH CÔNG TRÊN DOSIIN",
       html: emailContent,
